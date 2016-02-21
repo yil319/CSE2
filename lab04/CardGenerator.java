@@ -1,7 +1,7 @@
 /*
 Vincent Liu
 CSE002-111
-lab03-CardGenerator
+lab04-CardGenerator
 2016/02/19
 
 the goal of this lab is to exercise in using if statements,
@@ -12,15 +12,10 @@ e.g. You picked the 6 of Clubs
 */
 
 import java.util.Random;    //imports random number generator
-import java.util.Scanner;   //imports Scanner
 
 public class CardGenerator{
     public static void main(String[] args){
     //declairs class and main method
-    
-    //scanner
-    Scanner myScanner;  //declairs a scanner
-    myScanner = new Scanner (System.in);    //constructs the scanner
 
     int card = (int) (Math.random()*52+1);   //randomly assigns an integer from 0-52.
 
