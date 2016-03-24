@@ -17,49 +17,87 @@ public class Bowtie{
 	Scanner scan = new Scanner (System.in);
         //declairs & constructs the scanner
     
-	int numberStars = 9;
-    int nStars = numberStars;
-	int i = 0;
-	int k = 0;
-	while(i < nStars){	//starts a while loop that prints the top half of the bowtie
-		System.out.print("*");	//prints a star ‘*'
-		i++;		//set i = i + 1
-		while(i == nStars){	//starts a while loop for ending each row of stars
-			nStars -= 2;	//set nStars = nStars - 2
-			i = 0;	//reset i = 0
-			k++;		//set k = k + 1
-			switch(k){	//starts a switch statement to format the stars
-				case 1: System.out.print("\n "); break;
-				case 2: System.out.print("\n  "); break;
-				case 3: System.out.print("\n   "); break;
-				case 4: System.out.print("\n    "); break;
-				case 5: System.out.print("\n     "); break;
-				case 6: System.out.print("\n      "); break;
-				case 7: System.out.print("\n       "); break;
-				case 8: System.out.print("\n        "); break;
-				case 9: System.out.print("\n         "); break;
-				case 10: System.out.print("\n          "); break;
-				case 11: System.out.print("\n           "); break;
-				case 12: System.out.print("\n            "); break;
-				case 13: System.out.print("\n             "); break;
-				case 14: System.out.print("\n              "); break;
-				case 15: System.out.print("\n               "); break;
-				case 16: System.out.print("\n                "); break;
-				case 17: System.out.print("\n                 "); break;
-				//put in the correct spaces for each line of stars
-			}	//end of switch
-		}	//end of while loop
-	}	//end of while loop
-	int mStars = numberStars
-	while(mStars < numberStars){		//starts a while loop for the bottom half of the bowtie
-		nStars += 2;	//set nStars = nStars + 2
-		while(i < nStars){	//starts a while loop that prints stars
-			System.out.print("*");	//prints one star '*'
-			i++;	//set i = i + 1
-		}	//end of while loop
-		System.out.print(k);
-		i = 0;	//reset i = 0
-	}	//end of while loop		
-
+    if(true){	//opens an if statement to store code
+		int nStars = 9;	//initializes and declairs the int value nStars = 9
+	    for(int row=0; row<nStars; row++){
+    	//sets variable, condition, and increment for for loop
+    		for(int col=0; col<nStars; col++){
+    		//sets variable, condition, and increment for for loop
+    			if(row<=nStars/2 && col<row){
+    			//opens an if statement for conditions
+    				System.out.print(" ");	//prints a space
+    			}	//end of if statement
+    			else if(row>=nStars/2 && col>row){
+    			//opens an else if statement for conditions
+    				System.out.print(" ");	//prints a space
+    			}	//end of else if statement
+    			else if(row+col>=nStars && row<=nStars/2){
+    			//opens an else if statement for conditions
+    				System.out.print(" ");	//prints a space
+    			}	//end of else if statement
+    			else if(row+col<=nStars-2 && row>=nStars/2){
+    			//opens an else if statement for conditions
+    				System.out.print(" ");	//prints a space
+    			}	//end of else if statement
+    			else{	//opens an else statement for printing stars
+    				System.out.print("*");	//prints a star
+    			}	//end of else statement
+    		}	//end of for loop
+    		System.out.println();	//changes the line
+	    }	//end of for loop
+    }	//end of if statement
+    
+    if(true){	//opens an if statement to store code
+    	System.out.print("Input an odd integer from 3 to 33, inclusive: ");
+    	int nStars = 0;	//initializes int value nStars
+		while(scan.hasNext()){  //check for any input
+            if(scan.hasNextInt()){    //check for input type
+                nStars = scan.nextInt();    //assigns nStars as the next input
+                while(nStars<3 || nStars>33){ //check if input is within domain
+                    System.out.println
+                    ("Error: please type in an odd integer from 3 to 33, inclusive.");
+                    //prints the error message
+                    System.out.print("Input an odd integer: ");
+                    //asks user for input
+                    nStars = scan.nextInt();    //assigns nStars as the next input
+                }   //end of while loop
+                break;
+            }   //end of if statement
+            else{   //in cases of error
+            System.out.println("Error: please type in an integer. " + scan.next());
+            //prints out the error message and the false input
+            System.out.print("Input your desired length: ");    
+            //asks user for input
+            }   //end of else statement
+        }   //end of while loop
+        
+	    for(int row=0; row<nStars; row++){
+    	//sets variable, condition, and increment for for loop
+    		for(int col=0; col<nStars; col++){
+    		//sets variable, condition, and increment for for loop
+    			if(row<=nStars/2 && col<row){
+    			//opens an if statement for conditions
+    				System.out.print(" ");	//prints a space
+    			}	//end of if statement
+    			else if(row>=nStars/2 && col>row){
+    			//opens an else if statement for conditions
+    				System.out.print(" ");	//prints a space
+    			}	//end of else if statement
+    			else if(row+col>=nStars && row<=nStars/2){
+    			//opens an else if statement for conditions
+    				System.out.print(" ");	//prints a space
+    			}	//end of else if statement
+    			else if(row+col<=nStars-2 && row>=nStars/2){
+    			//opens an else if statement for conditions
+    				System.out.print(" ");	//prints a space
+    			}	//end of else if statement
+    			else{	//opens an else statement for printing stars
+    				System.out.print("*");	//prints a star
+    			}	//end of else statement
+    		}	//end of for loop
+    		System.out.println();	//changes the line
+	    }	//end of for loop
+	}	//end of if statement
+    
     }   //end of main method
-}   //end of class
+}   //end of class   
