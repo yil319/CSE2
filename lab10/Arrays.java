@@ -6,7 +6,7 @@ lab10-Arrays
 
 The objective of this lab is to get familiar with one-dimentional array.
 
-This program will 
+This program will store midterm grades of students and print them out.
 */
 
 import java.util.Scanner;   //imports Scanner
